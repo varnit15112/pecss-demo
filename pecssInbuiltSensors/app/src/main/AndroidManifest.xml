@@ -4,6 +4,12 @@
     package="edu.gatech.pecssinbuiltsensors">
 
     <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
 
@@ -14,6 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".LocationActivity"
+            android:label="@string/title_activity_location"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".recordingPlayer" />
-        <activity android:name=".showResults"></activity>
+        <activity android:name=".showResults" />
     </application>
 
 </manifest>

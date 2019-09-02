@@ -14,12 +14,14 @@ public class MainActivity extends AppCompatActivity {
     private long diff ;
     private Button startButton;
     private commonData commonDataObject;
+    private Button startLocationButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        startLocationButton = findViewById(R.id.location_activity_btn);
 
         startButton = findViewById(R.id.round_button);
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        startLocationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), LocationActivity.class));
+            }
+        });
     }
 
 
