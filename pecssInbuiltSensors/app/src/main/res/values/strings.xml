@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">pecssInbuiltSensors</string>
+    <string name="notification_channel_name">All Notifications</string>
+    <string name="notification_channel_description">A notification channel for all notifications</string>
 </resources>
